@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iSk-LH-rcl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Listing Detail View Controller-->
+        <scene sceneID="Q63-ed-ecT">
+            <objects>
+                <viewController title="Details" hidesBottomBarWhenPushed="YES" id="iSk-LH-rcl" userLabel="Listing Detail View Controller" customClass="ListingDetailViewController" customModule="buynothing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sQx-E1-deL"/>
+                        <viewControllerLayoutGuide type="bottom" id="j5s-Li-8fX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lbm-m5-Wof">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TkB-fj-Azt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r57-4y-GCs">
+                                <rect key="frame" x="16" y="35" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="close-white">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonWasPressed:" destination="iSk-LH-rcl" eventType="touchUpInside" id="xuV-BM-wsP"/>
+                                </connections>
+                            </button>
+                            <button clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzJ-Xb-f7y">
+                                <rect key="frame" x="112.5" y="72" width="150" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2LC-Xx-Jg4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="more info">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="yIq-DJ-0hj" kind="show" identifier="ListingDetailMoreInfoViewController" id="SvX-aG-BSp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygX-Oe-jfE">
+                                <rect key="frame" x="16" y="607" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iM6-bt-xIw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TkB-fj-Azt" secondAttribute="trailing" id="06f-zn-m6b"/>
+                            <constraint firstItem="ygX-Oe-jfE" firstAttribute="leading" secondItem="lbm-m5-Wof" secondAttribute="leadingMargin" id="Bwv-z3-TY0"/>
+                            <constraint firstItem="TkB-fj-Azt" firstAttribute="top" secondItem="lbm-m5-Wof" secondAttribute="top" id="L26-1B-yJP"/>
+                            <constraint firstItem="dzJ-Xb-f7y" firstAttribute="centerX" secondItem="lbm-m5-Wof" secondAttribute="centerX" id="Nf6-2G-bl2"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ygX-Oe-jfE" secondAttribute="bottom" constant="20" id="PVP-56-b0u"/>
+                            <constraint firstAttribute="bottom" secondItem="TkB-fj-Azt" secondAttribute="bottom" id="TJT-zO-vcV"/>
+                            <constraint firstItem="dzJ-Xb-f7y" firstAttribute="top" secondItem="sQx-E1-deL" secondAttribute="bottom" constant="8" id="bUc-vx-cFp"/>
+                            <constraint firstItem="ygX-Oe-jfE" firstAttribute="trailing" secondItem="lbm-m5-Wof" secondAttribute="trailingMargin" id="ecI-ej-qBX"/>
+                            <constraint firstItem="TkB-fj-Azt" firstAttribute="leading" secondItem="lbm-m5-Wof" secondAttribute="leading" id="mcO-1F-riQ"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO">
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </simulatedNavigationBarMetrics>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics">
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </simulatedTabBarMetrics>
+                    <connections>
+                        <outlet property="imageView" destination="TkB-fj-Azt" id="A8N-im-Lf8"/>
+                        <outlet property="listingTitle" destination="ygX-Oe-jfE" id="IVa-La-CIl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfc-Kn-Fr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3421.5999999999999" y="-556.37181409295351"/>
+        </scene>
+        <!--ListingDetailMoreInfoViewController-->
+        <scene sceneID="rQV-hN-qgA">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ListingDetailMoreInfoViewController" storyboardName="ListingDetailMoreInfoViewController" id="yIq-DJ-0hj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AKQ-98-hYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4292" y="-513"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close-white" width="156" height="156"/>
+    </resources>
+    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+</document>
